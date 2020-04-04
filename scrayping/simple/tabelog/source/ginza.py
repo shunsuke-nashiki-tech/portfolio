@@ -368,8 +368,7 @@ def main():
     file_path_item_list = create_file_path("../output/","output")
 
     #取得日と全ページの詳細URLを取得
-    #for i in range(page_count):
-    for i in range(1):
+    for i in range(page_count):
         
         #URLを生成する
         target_url = create_url_adress(current_page_number)
@@ -385,10 +384,6 @@ def main():
         #現ページ数を1ページ加算
         current_page_number += 1
         
-
-    ############################
-    #CSVファイルをpandasで読み込む
-    ############################
 
     #inputするファイルを読み込み
     try:
