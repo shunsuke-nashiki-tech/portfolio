@@ -53,7 +53,6 @@ class Get_data:
         budget_dinner_upper_list = [] #予算_夜_上限
 
         #BeautifulSoupで取得
-
         self.url_adress = url_adress
         
         while True:
@@ -247,11 +246,8 @@ class Get_data:
                             budget_dinner_lower_list.append(self.budget_dinner_lower)
                             budget_dinner_upper_list.append(self.budget_dinner_upper)
 
-#################
-#CSVを生成
-#################
 
-#url_listのアウトプット
+#url_listをアウトプット
 def create_csv_url_list(file_path):
 
     #CSVが存在しなければ、Headerを追加する
@@ -267,6 +263,7 @@ def create_csv_url_list(file_path):
     with open(file_path,'a',errors='backslashreplace',encoding="SHIFT-JIS") as fout:
             writecsv = csv.writer(fout,lineterminator='\n')
             writecsv.writerows(data)
+
 
 #item_listのアウトプット
 def create_csv_item_list(file_path):
@@ -344,7 +341,6 @@ def main():
     #今日の日付
     global date_time
     date_time = str(datetime.date.today())
-
     
     #待機時間
     global succses_wait_time
